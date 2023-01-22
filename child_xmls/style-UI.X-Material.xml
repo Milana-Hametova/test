@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<style title="UI.X Material" description="The Ultimate Theme Framework" user_selectable="1" export_version="2">
+  <templates>
+    <template title="uix_material.less" type="public" addon_id="" version_id="0" version_string=""><![CDATA[.uix_headerContainer {
+	.block-tabHeader {
+		
+		.tabs-tab{
+			color: rgba(255,255,255,.5);
+			
+			&.is-active {
+				color: #fff;
+				border-color: #fff;
+			}
+		}
+	}
+}
+
+[data-template="thtrending_trending_view"] .block-outer:first-child {
+	display: none;
+}]]></template>
+  </templates>
+  <properties>
+    <property property_name="fontSizeLargest" group_name="fonts" title="Largest font size" description="" property_type="value" value_type="unit" depends_on="" value_group="size" display_order="1600" addon_id="XF">
+      <value>"20px"</value>
+    </property>
+    <property property_name="paddingMedium" group_name="borderSpacing" title="Medium padding" description="" property_type="value" value_type="unit" depends_on="" value_group="padding" display_order="2100" addon_id="XF">
+      <value>"12px"</value>
+    </property>
+    <property property_name="publicNavCollapseWidth" group_name="headerNav" title="Navigation collapse width" description="Below this page width, the navigation system will collapse down into an off canvas menu" property_type="value" value_type="unit" depends_on="" value_group="navigation" display_order="1300" addon_id="XF">
+      <value>"1200px"</value>
+    </property>
+    <property property_name="publicNavSelected" group_name="headerNav" title="Navigation row - selected tab" description="" property_type="css" value_type="" depends_on="" value_group="" display_order="20300" css_components="text,background,border,border_radius,extra" addon_id="XF">
+      <value>{
+    "color": "#fff",
+    "font-weight": "@xf-fontWeightHeavy",
+    "border-top-left-radius": "@xf-borderRadiusSmall",
+    "border-top-right-radius": "@xf-borderRadiusSmall",
+    "extra": "box-shadow: inset 0 -3px #fff;"
+}</value>
+    </property>
+    <property property_name="publicNavSticky" group_name="headerNav" title="Sticky navigation element" description="" property_type="value" value_type="radio" depends_on="" value_group="navigation" display_order="1200" addon_id="XF">
+      <value_parameters>primary={{ phrase('primary_navigation_row_only') }}
+all={{ phrase('primary_and_sub_navigation_rows') }}
+none={{ phrase('none') }}</value_parameters>
+      <value>"all"</value>
+    </property>
+    <property property_name="uix_additionalCss" group_name="uix_globalSettings" title="List of additional css templates to include" description="A comma separated list of additional CSS/less templates to load. Requires the .css or .less suffix" property_type="value" value_type="string" depends_on="" value_group="" display_order="400" addon_id="">
+      <value>"uix_material.less"</value>
+    </property>
+    <property property_name="uix_avatarShape" group_name="avatar" title="Avatar shape" description="Changes the shape of avatars (may overwrite avatar border radius style property)" property_type="value" value_type="select" depends_on="" value_group="" display_order="10" addon_id="">
+      <value_parameters>0=Default
+1=Circle
+2=Square
+3=Diamond
+4=Pentagon
+5=Hexagon
+6=Octagon</value_parameters>
+      <value>"0"</value>
+    </property>
+    <property property_name="uix_brandmarkImage__breakpoint" group_name="basic" title="Logo breakpoint" description="Max viewport width to switch to the brandmark image. Use 100% for always, 0 for never, and other values in pixels" property_type="value" value_type="string" depends_on="" value_group="" display_order="600" addon_id="">
+      <value>"@xf-responsiveMedium"</value>
+    </property>
+    <property property_name="uix_clickableThreads" group_name="uix_discussionList" title="Clickable threads" description="Makes the entire thread list item clickable" property_type="value" value_type="boolean" depends_on="" value_group="" display_order="0" addon_id="">
+      <value>1</value>
+    </property>
+    <property property_name="uix_discussionListCollapseWidth" group_name="uix_discussionList" title="Width to collapse discussion list items" description="" property_type="value" value_type="string" depends_on="" value_group="" display_order="0" addon_id="">
+      <value>"10000px"</value>
+    </property>
+    <property property_name="uix_enableExtendedFooter" group_name="footer" title="Enable Extended Footer" description="" property_type="value" value_type="boolean" depends_on="" value_group="" display_order="100" addon_id="">
+      <value>0</value>
+    </property>
+    <property property_name="uix_enableMainTabs" group_name="uix_globalSettings" title="Main page tabs" description="" property_type="value" value_type="boolean" depends_on="" value_group="" display_order="0" addon_id="">
+      <value>1</value>
+    </property>
+    <property property_name="uix_enableWelcomeHeaderImage" group_name="uix_welcomeSection" title="Welcome block image hero" description="Adds the welcome block image to the entire header component. (Note: only applicable when welcome block is in header)" property_type="value" value_type="boolean" depends_on="" value_group="" display_order="0" addon_id="">
+      <value>1</value>
+    </property>
+    <property property_name="uix_headerWrapper" group_name="headerNav" title="Header wrapper" description="Styles the wrapper around the entire header" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="background,border,border_radius,padding,extra" addon_id="">
+      <value>{
+    "background-color": "@xf-uix_primaryColor"
+}</value>
+    </property>
+    <property property_name="uix_hideNodeStats" group_name="nodeList" title="Hide node stats" description="" property_type="value" value_type="boolean" depends_on="" value_group="" display_order="2200" addon_id="">
+      <value>0</value>
+    </property>
+    <property property_name="uix_metaCell" group_name="uix_discussionList" title="Meta cell (for discussion list)" description="" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="background,border" addon_id="">
+      <value>{
+    "border-top-width": "0",
+    "border-top-color": "@xf-borderColor",
+    "border-bottom-width": "0",
+    "border-bottom-color": "@xf-borderColor"
+}</value>
+    </property>
+    <property property_name="uix_navLogoVertSpacing" group_name="basic" title="Navigation logo vertical spacing" description="The max height of the navigation logo is the height of the navigation bar minus these spacings, however it may be smaller when there is not enough horizontal width." property_type="value" value_type="unit" depends_on="" value_group="" display_order="0" addon_id="">
+      <value>"15px"</value>
+    </property>
+    <property property_name="uix_navigationBarHeight" group_name="headerNav" title="Navigation bar height" description="Sets the height of the primary navigation bar. (Note: this gets overwritten by sticky nav bar height when applicable. If unset, the navigation bar height will simply be as large as the largest component inside of it.)" property_type="value" value_type="unit" depends_on="" value_group="" display_order="2010" addon_id="">
+      <value>"60px"</value>
+    </property>
+    <property property_name="uix_navigationType" group_name="headerNav" title="Navigation type" description="Sets the type of navigation style." property_type="value" value_type="select" depends_on="" value_group="" display_order="2100" addon_id="">
+      <value_parameters>default=Default
+sidebarNav=Sidebar navigation</value_parameters>
+      <value>"sidebarNav"</value>
+    </property>
+    <property property_name="uix_nodeBodyHover" group_name="nodeList" title="Node body (hover)" description="Adds a hover state to nodes" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="background,border,extra" addon_id="">
+      <value>{
+    "extra": "box-shadow: @xf-uix_elevation2;\nposition: relative;"
+}</value>
+    </property>
+    <property property_name="uix_nodeClickable" group_name="nodeList" title="Clickable nodes" description="Makes the entire node a clickable link to the forum. (Ignores other inner links.)" property_type="value" value_type="boolean" depends_on="" value_group="" display_order="2050" addon_id="">
+      <value>1</value>
+    </property>
+    <property property_name="uix_nodeTitle" group_name="nodeList" title="Node Title" description="" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="text,padding,extra" addon_id="">
+      <value>{
+    "font-size": "@xf-fontSizeLarge",
+    "color": "@xf-textColor",
+    "font-weight": "@xf-fontWeightHeavy",
+    "extra": "margin: 0;"
+}</value>
+    </property>
+    <property property_name="uix_pageStyle" group_name="page" title="Page style" description="Sets the overall page style for the theme." property_type="value" value_type="select" depends_on="" value_group="" display_order="4000" addon_id="">
+      <value_parameters>covered=Default (covered)
+fixed=Fixed
+wrapped=Wrapped</value_parameters>
+      <value>"covered"</value>
+    </property>
+    <property property_name="uix_removeBottomBreadcrumb" group_name="uix_breadcrumb" title="Remove bottom breadcrumb" description="" property_type="value" value_type="boolean" depends_on="" value_group="" display_order="400" addon_id="">
+      <value>1</value>
+    </property>
+    <property property_name="uix_removeIndexPageTitle" group_name="uix_globalSettings" title="Remove Title from Forum Index" description="Removes the page title from the forum index. Note: Only applicable when there are no other components in titlebar (such as page action or sidebar toggle.)" property_type="value" value_type="boolean" depends_on="" value_group="" display_order="100" addon_id="">
+      <value>0</value>
+    </property>
+    <property property_name="uix_removePageAction" group_name="uix_globalSettings" title="Remove forum list page actions" description="Removes the page actions from the forum list. By default these are New Posts and Post New Thread." property_type="value" value_type="boolean" depends_on="" value_group="" display_order="200" addon_id="">
+      <value>0</value>
+    </property>
+    <property property_name="uix_searchBar" group_name="uix_search" title="Search Bar" description="" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="text,background,border,border_radius,border_width_simple,border_color_simple,border_radius_simple,padding,extra" addon_id="">
+      <value>{
+    "color": "#fff",
+    "background-color": "lighten(@xf-publicNav--background-color, 7%)",
+    "border-radius": "@xf-borderRadiusMedium"
+}</value>
+    </property>
+    <property property_name="uix_searchBarHeight" group_name="uix_search" title="Search bar height" description="" property_type="value" value_type="unit" depends_on="" value_group="" display_order="300" addon_id="">
+      <value>"40px"</value>
+    </property>
+    <property property_name="uix_searchBarPlaceholderColor" group_name="uix_search" title="Search bar placeholder color" description="" property_type="value" value_type="color" depends_on="" value_group="" display_order="2000" addon_id="">
+      <value>"#fff"</value>
+    </property>
+    <property property_name="uix_searchBarWidth" group_name="uix_search" title="Search bar width" description="(Required for minimal search animation)" property_type="value" value_type="unit" depends_on="" value_group="" display_order="400" addon_id="">
+      <value>"600px"</value>
+    </property>
+    <property property_name="uix_searchButton" group_name="uix_search" title="Add Button to the QuickSearch" description="Enabling this setting will add a functional submit button to the QuickSearch." property_type="value" value_type="boolean" depends_on="" value_group="" display_order="500" addon_id="">
+      <value>0</value>
+    </property>
+    <property property_name="uix_searchIcon" group_name="uix_search" title="Search icon" description="Styles the search icon" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="text,background,padding,extra" addon_id="">
+      <value>{
+    "font-size": "@xf-uix_iconSizeLarge",
+    "color": "rgba(255,255,255,.5)",
+    "padding": "@xf-paddingSmall",
+    "padding-right": "@xf-paddingSmall * 2",
+    "padding-left": "@xf-paddingSmall * 2",
+    "extra": "float: left;"
+}</value>
+    </property>
+    <property property_name="uix_searchPosition" group_name="uix_search" title="Search position" description="Sets where the search bar appears" property_type="value" value_type="select" depends_on="" value_group="" display_order="200" addon_id="">
+      <value_parameters>staffBar=Staff bar (right)
+navigation=Navigation (right)
+navigationLeft=Navigation (left)
+tablinks=Sub navigation (right)
+header=Header row (right)</value_parameters>
+      <value>"navigationLeft"</value>
+    </property>
+    <property property_name="uix_separateThreads" group_name="uix_discussionList" title="Separate Sticky Threads" description="This will add headings above sticky threads and above normal threads to clearly differentiate the two types of threads." property_type="value" value_type="boolean" depends_on="" value_group="" display_order="0" addon_id="">
+      <value>1</value>
+    </property>
+    <property property_name="uix_sideNavCollapsed" group_name="headerNav" title="Collapse sidebar navigation section links" description="Collapses the active tabs section links by default. Note: Only applicable when navigation style is set to sidebar navigation." property_type="value" value_type="boolean" depends_on="" value_group="" display_order="2120" addon_id="">
+      <value>1</value>
+    </property>
+    <property property_name="uix_sidebarTriggerPosition" group_name="uix_sidebar" title="Sidebar trigger position" description="" property_type="value" value_type="select" depends_on="" value_group="" display_order="500" addon_id="">
+      <value_parameters>sectionLinks=Sub navigation
+titlebar=Titlebar</value_parameters>
+      <value>"titlebar"</value>
+    </property>
+    <property property_name="uix_stickySidebar" group_name="uix_sidebar" title="Sticky sidebar" description="Makes both the sidebar as well as the sidenav sticky." property_type="value" value_type="boolean" depends_on="" value_group="" display_order="600" addon_id="">
+      <value>1</value>
+    </property>
+    <property property_name="uix_tabBarLocation" group_name="uix_globalSettings" title="Main tabbar location" description="" property_type="value" value_type="select" depends_on="uix_enableMainTabs" value_group="" display_order="0" addon_id="">
+      <value_parameters>aboveMainContainer=Default (above main container)
+mainContainerTop= Top of main container
+aboveMainContent=Above main content
+mainContentTop=Top of main content
+header=Bottom of header</value_parameters>
+      <value>"header"</value>
+    </property>
+    <property property_name="uix_titlebar" group_name="uix_globalSettings" title="Titlebar" description="Styles the wrapper around page title and page description" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="text,background,border,border_radius,padding,extra" addon_id="">
+      <value>{
+    "font-size": "@xf-fontSizeSmall",
+    "color": "@xf-textColorMuted",
+    "border-radius": "@xf-borderRadiusSmall"
+}</value>
+    </property>
+    <property property_name="uix_titlebarLocation" group_name="page" title="Titlebar location" description="Sets where the titlebar should appear in the page" property_type="value" value_type="select" depends_on="" value_group="" display_order="4200" addon_id="">
+      <value_parameters>aboveMainContainer=Default (above main container)
+mainContainerTop= Top of main container
+aboveMainContent=Above main content
+mainContentTop=Top of main content
+header=Bottom of header
+belowHeader=Below header</value_parameters>
+      <value>"aboveMainContainer"</value>
+    </property>
+    <property property_name="uix_viewportCollapseStats" group_name="nodeList" title="Viewport width to collapse node stats" description="This sets the minimum viewport width to show the full node stat display. (Note: not applicable with Node Grid)" property_type="value" value_type="unit" depends_on="" value_group="" display_order="2500" addon_id="">
+      <value>"10000px"</value>
+    </property>
+    <property property_name="uix_viewportShowLogoBlock" group_name="headerNav" title="Minimum viewport width to show logo block" description="Viewport width to show the logo block. Below this width, the logo block will hide, and its components will be moved to the navigation" property_type="value" value_type="unit" depends_on="uix_enableLogoBlock" value_group="" display_order="6100" addon_id="">
+      <value>"100%"</value>
+    </property>
+    <property property_name="uix_viewportWidthRemoveSubNav" group_name="headerNav" title="Viewport width to remove the sub-navigation" description="" property_type="value" value_type="string" depends_on="" value_group="" display_order="2020" addon_id="">
+      <value>"100%"</value>
+    </property>
+    <property property_name="uix_welcomeSectionLocation" group_name="uix_welcomeSection" title="Welcome section location" description="Chooses where to insert the welcome section" property_type="value" value_type="select" depends_on="" value_group="" display_order="200" addon_id="">
+      <value_parameters>aboveMainContainer=Default (above main container)
+mainContainerTop= Top of main container
+aboveMainContent=Above main content
+mainContentTop=Top of main content
+header=Bottom of header</value_parameters>
+      <value>"aboveMainContainer"</value>
+    </property>
+    <property property_name="uix_welcomeSection__style" group_name="uix_welcomeSection" title="Welcome section container" description="" property_type="css" value_type="" depends_on="" value_group="" display_order="0" css_components="background,border,border_radius,padding,extra" addon_id="">
+      <value>{
+    "background-color": "@xf-uix_primaryColor",
+    "background-image": "url('@xf-uix_imagePath/images/welcome-banner.png')",
+    "border-radius": "0",
+    "extra": "margin-bottom: @xf-elementSpacer;\nbackground-size: cover;\nbackground-position: center;"
+}</value>
+    </property>
+  </properties>
+</style>
